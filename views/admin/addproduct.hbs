@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 col-md-offset-4 main main-title">
+            <h1>Add product</h1>
+            {{#if hasErrors}}
+                <div class="alert alert-danger">
+                    {{#each messages }}
+                        <p>{{this}}</p>
+                    {{/each}}
+                </div>
+            {{/if}}
+            <form action="/admin/addproduct" method="post">
+                <div class="checkout">
+                    <label for="title">Product Name</label>
+                    <input type="text" id="title" name="title" class="form-control">
+                </div>
+                <div class="checkout">
+                    <label for="price">Price</label>
+                    <input type="text" id="price" name="price" class="form-control">
+                </div>
+                <div class="checkout">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description" class="form-control">
+                </div>
+                <div class="checkout">
+                    <label for="imagePath">Image</label>
+                    <input type="file" id="imagePath" name="imagePath" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-raised btn-info main button-submit">Submit</button>
+            </form>
+        </div>
+    </div> 
+</body>
+</html>

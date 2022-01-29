@@ -1,0 +1,183 @@
+<div class="row alerts">
+    <div class="col-md-4">
+        <div id="success" class="alert alert-success {{#if noMessage}}invisible{{/if}}">
+            {{ successMgs }}
+        </div>
+    </div>
+
+</div>
+<div>
+
+</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div id="banner">
+    <div id="slider" class="row">
+        <div class="slide">
+            <div class="text">
+                <div class="container">
+                    <p>Get upto <span>25%</span> off</p>
+                    <h2>Exciting Deals on <br> Televisions</h2>
+                    <a href="#">Shop Now</a>
+                </div>
+            </div>
+            <div class="image">
+                <img class="w-100"
+                    src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/banner1.png"
+                    alt="img">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="text">
+                <div class="container">
+                    <p>Get upto <span>25%</span> off</p>
+                    <h2>Exciting Deals on <br> Televisions</h2>
+                    <a href="#">Shop Now</a>
+                </div>
+            </div>
+            <div class="image">
+                <img class="w-100"
+                    src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/banner2.png"
+                    alt="img">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="text">
+                <div class="container">
+                    <p>Get upto <span>25%</span> off</p>
+                    <h2>Exciting Deals on <br> Televisions</h2>
+                    <a href="#">Shop Now</a>
+                </div>
+            </div>
+            <div class="image">
+                <img class="w-100"
+                    src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/banner3.png"
+                    alt="img">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="text">
+                <div class="container">
+                    <p>Get upto <span>25%</span> off</p>
+                    <h2>Exciting Deals on <br> Televisions</h2>
+                    <a href="#">Shop Now</a>
+                </div>
+            </div>
+            <div class="image">
+                <img class="w-100"
+                    src="https://demo.w3layouts.com/demos_new/template_demo/11-06-2021/electronics-mart-liberty-demo_Free/1081434887/web/images/banner4.png"
+                    alt="img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="games">
+    {{# each products }}
+    {{# each this}}
+    <div class="game">
+        <div class="card thumbnail">
+            <img class="card-img-top shop-image  img-fluid" src="{{ this.imagePath }}" alt="Card image cap">
+            <div class="card-block">
+                <h4 class="card-title">{{ this.title }}</h4>
+                <p class="card-text product-description">
+                    {{ this.description }}
+                </p>
+                <div class="clearfix">
+                    <div class="price pull-left">{{ this.price }}</div>
+                    <a href="/cart/add-to-cart/{{this._id}}" class="btn btn-raised btn-success pull-right">
+                        <i class="fa fa-gift" aria-hidden="true"></i> Add to cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    {{/each}}
+</div>
+<style>
+    #banner {
+        /* position: relative; */
+    }
+
+    #slider {
+        width: 400%;
+        animation: slider 20s infinite linear;
+    }
+
+    #slider .slide {
+        width: 25%;
+        position: relative;
+    }
+
+    #banner .text {
+        padding: 80px 0px;
+    }
+
+    #banner .text p {
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    #banner .text p span {
+        font-size: 2em;
+    }
+
+    #banner .text h2 {
+        text-transform: uppercase;
+        font-size: 2.1em;
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    #banner .slide .image {
+        position: absolute;
+        width: 100%;
+        top: 0%;
+        z-index: -1;
+    }
+
+    #banner .slide .image img {
+        height: 380px;
+        object-fit: cover;
+    }
+
+    @keyframes slider {
+
+        0%,
+        20% {
+            transform: translateX(0%);
+        }
+
+        25%,
+        45% {
+            transform: translateX(-25%);
+        }
+
+        50%,
+        70% {
+            transform: translateX(-50%);
+        }
+
+        75%,
+        95% {
+            transform: translateX(-75%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
+</style>
